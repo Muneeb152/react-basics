@@ -5,8 +5,8 @@ import {Todos} from "./MyComponents/Todos"
 import {Footer} from "./MyComponents/Footer"
 
 function App() {
-  const onDelete=()=>{
-    console.log("I'm on Delete")
+  const onDelete=(todo)=>{
+    console.log("I'm on Delete of todo:"+todo)
   }
 
   let todos=[
