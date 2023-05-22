@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from "./MyComponents/Header"
 import {Todos} from "./MyComponents/Todos"
+import {AddTodo} from "./MyComponents/AddTodo"
 import {Footer} from "./MyComponents/Footer"
 import React, { useState } from 'react'
 
@@ -36,6 +37,7 @@ function App() {
     
     <>
       <Header title="My Todos List" searchBar={false} />
+      <AddTodo/>
       <Todos todos={todos} onDelete={onDelete} />
       <Footer />
     </>
