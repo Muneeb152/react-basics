@@ -8,7 +8,7 @@ import React, { useEffect, useState, userEffect } from "react";
 
 function App() {
   let initTodo;
-  if (localStorage.getItem("todos")=== null) {
+  if (localStorage.getItem("todos") === null) {
     initTodo = [];
   } else {
     initTodo = JSON.parse(localStorage.getItem("todos"));
@@ -24,7 +24,7 @@ function App() {
         return e !== todo;
       })
     );
-    console.log("Deleted")
+    console.log("Deleted");
     localStorage.setItem("todos", JSON.stringify(todos));
   };
 
