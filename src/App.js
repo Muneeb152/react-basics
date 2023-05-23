@@ -20,7 +20,6 @@ function App() {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
   const onDelete = (todo) => {
-    console.log("I'm on Delete of todo:" + todo);
     //Deleting in this way in react doesnot work
     // let index=todos.indexOf(todo);
     // todos.splice(index,1);
@@ -30,14 +29,12 @@ function App() {
         return e !== todo;
       })
     );
-    console.log("Deleted");
     localStorage.setItem("todos", JSON.stringify(todos));
   };
 
   const addTodo = (title, desc) => {
-    console.log("I'm adding this todo:" + title, desc);
     let sno;
-    if (todos.length == 0) {
+    if (todos.length === 0) {
       sno = 0;
     } else {
       sno = todos[todos.length - 1].sno + 1;
@@ -48,7 +45,6 @@ function App() {
       desc: desc,
     };
     setTodos([...todos, myTodo]);
-    console.log(myTodo);
   };
   const [todos, setTodos] = useState(initTodo);
 
